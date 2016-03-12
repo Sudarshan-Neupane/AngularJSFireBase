@@ -1,0 +1,42 @@
+<html ng-app="myApp">
+<head>
+<title>
+</title>
+</head>
+<body>
+My text here
+.Below the view content
+<!--<div  ng-controller="myController"> -->
+
+<div ng-view="">
+</div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script>
+var myapp = angular.module("myApp",[]);
+myapp.config(function($routeProvider){
+$routeProvider
+.when('/',{
+	controller:'myController',
+	templateUrl:'view1.html'
+	})
+.when('/part2',{
+	controller:'myController,
+	templateUrl:'view2.html',
+})
+.otherwise({
+	redirectTo : '/'
+});
+});
+myapp.controller('myController',function($scope){
+	$scope.customers=[
+{name:'John Smith',city:'Iowa'},
+{name:'Andrey Mail',city:'chicago'}
+];
+});
+</script>
+</body>
+</html>
+
