@@ -15,8 +15,8 @@ Firebase AngularJs
 <script src="https://cdn.firebase.com/libs/angularfire/1.1.4/angularfire.min.js"></script>
 </head>
 <body ng-controller="myController" class="container" style="margin-top:50px;">
-<button ng-click="showForm()" ng-hide="addFormShow" class="btn btn-success btn-sm"> <strong> + </strong> </button> |
-<button ng-click="hideForm()" ng-show="addFormShow" class="btn btn-success btn-sm"> <strong> - </strong> </button>
+<button ng-click="showForm()" ng-hide="addFormShow" class="btn btn-success btn-sm"> <strong> Add Country + </strong> </button> |
+<button ng-click="hideForm()" ng-show="addFormShow" class="btn btn-success btn-sm"> <strong> - Remove Form  </strong> </button>
 <div>
 <div class="col-sm-4"> 
 	<form ng-submit="addCountry()" ng-show="addFormShow">
