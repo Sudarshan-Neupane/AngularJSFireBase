@@ -1,7 +1,12 @@
+//for angular APP
 var myApp = angular.module('myapp',['firebase']);
+
+//call controller
 myApp.controller('myController',['$scope','$firebaseArray',function($scope,$firebaseArray){
 var country = new Firebase('https://incandescent-inferno-3656.firebaseio.com/countries');
 $scope.countries = $firebaseArray(country);
+
+//simple show hide for add edit button 
 
 $scope.showForm = function(){
 	$scope.addFormShow =true;
@@ -18,6 +23,7 @@ function clearForm(){
 	$scope.Code ='';
 }
 
+// CRUD OPERATION
 
 $scope.addCountry = function(){
 	$scope.countries.$add({
