@@ -1,0 +1,32 @@
+!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+	<script src="script.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script>
+	var ref = new Firebase("https://incandescent-inferno-3656.firebaseio.com");
+ref.authWithOAuthRedirect("twitter", function(error) {
+  if (error) {
+    console.log("Login Failed!", error);
+  } else {
+    // We'll never get here, as the page will redirect on success.
+  }
+});
+
+// var ref = new Firebase("https://<YOUR-FIREBASE-APP>.firebaseio.com");
+// ref.authWithOAuthPopup("twitter", function(error, authData) {
+//   if (error) {
+//     console.log("Login Failed!", error);
+//   } else {
+//     console.log("Authenticated successfully with payload:", authData);
+//   }
+// });
+	</script>
+</head>
+<body>
+<h1> twitter demo </h1>
+Please open console and look for extra information while login
+
+</body>
+</html>
